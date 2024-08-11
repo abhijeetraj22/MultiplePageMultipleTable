@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MultiPageMultiTable.Models.Customer>
+
+<h2>Customers</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Customer/Create">Create New Customer</a>
+
